@@ -1,0 +1,1691 @@
+Last login: Sun Nov 23 09:34:05 on ttys000
+airbears2-10-142-30-5:~ KevinChen$ sqlite3
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+Connected to a transient in-memory database.
+Use ".open FILENAME" to reopen on a persistent database.
+sqlite> exit
+   ...> 
+   ...> 
+   ...> ()
+   ...> )
+   ...> 
+   ...> 
+   ...> 
+   ...> 
+   ...> 
+   ...> ;
+Error: near "exit": syntax error
+sqlite> exit;
+Error: near "exit": syntax error
+sqlite> .exit
+airbears2-10-142-30-5:~ KevinChen$ cd documents/school/cs61a/homework
+airbears2-10-142-30-5:homework KevinChen$ ls
+Lecture18.py	hw10.sql	hw4.py		hw7.scm
+__pycache__	hw2.py		hw5.py		hw8.scm
+hw1.py		hw3.py		hw6.py		hw9.py
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+barack
+clinton
+delano
+fillmore
+herbert
+REPLACE THIS LINE WITH YOUR SOLUTION
+REPLACE THIS LINE WITH YOUR SOLUTION
+REPLACE THIS LINE WITH YOUR SOLUTION
+REPLACE THIS LINE WITH YOUR SOLUTION
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+barack
+clinton
+delano
+fillmore
+herbert
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham|toy
+barack|standard
+clinton|standard
+delano|standard
+fillmore|mini
+herbert|mini
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham|medium
+abraham|mini
+abraham|standard
+abraham|toy
+barack|medium
+barack|mini
+barack|standard
+barack|toy
+clinton|medium
+clinton|mini
+clinton|standard
+clinton|toy
+delano|medium
+delano|mini
+delano|standard
+delano|toy
+eisenhower|medium
+eisenhower|mini
+eisenhower|standard
+eisenhower|toy
+fillmore|medium
+fillmore|mini
+fillmore|standard
+fillmore|toy
+grover|medium
+grover|mini
+grover|standard
+grover|toy
+herbert|medium
+herbert|mini
+herbert|standard
+herbert|toy
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham|toy
+barack|standard
+clinton|standard
+delano|standard
+fillmore|mini
+herbert|mini
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham|toy
+barack|standard
+clinton|standard
+delano|standard
+eisenhower|mini
+fillmore|mini
+grover|toy
+herbert|mini
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+Error: near line 50: no such column: a.height
+
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+Error: near line 50: no such column: height
+
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+
+Error: incomplete SQL: select parent_height
+-- Expected output:
+--   herbert
+--   fillmore
+--   abraham
+--   delano
+--   grover
+--   barack
+--   clinton
+
+-- Sentences about siblings that are the same size
+--select "REPLACE THIS LINE WITH YOUR SOLUTION";
+-- Expected output:
+--   barack and clinton are standard siblings
+--   abraham and grover are toy siblings
+
+-- Ways to stack 4 dogs to a height of at least 170, ordered by total height
+--select "REPLACE THIS LINE WITH YOUR SOLUTION";
+-- Expected output:
+--   abraham, delano, clinton, barack|171
+--   grover, delano, clinton, barack|173
+--   herbert, delano, clinton, barack|176
+--   fillmore, delano, clinton, barack|177
+--   eisenhower, delano, clinton, barack|180
+
+-- All non-parent relations ordered by height difference
+--select "REPLACE THIS LINE WITH YOUR SOLUTION";
+-- Expected output:
+--   fillmore|barack
+--   eisenhower|barack
+--   fillmore|clinton
+--   eisenhower|clinton
+--   eisenhower|delano
+--   abraham|eisenhower
+--   grover|eisenhower
+--   herbert|eisenhower
+--   herbert|fillmore
+--   fillmore|herbert
+--   eisenhower|herbert
+--   eisenhower|grover
+--   eisenhower|abraham
+--   delano|eisenhower
+--   clinton|eisenhower
+--   clinton|fillmore
+--   barack|eisenhower
+--   barack|fillmore
+
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+Error: near line 54: no such column: parent_height
+
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+abraham|barack|26
+abraham|clinton|26
+delano|herbert|46
+eisenhower|fillmore|35
+fillmore|abraham|32
+fillmore|delano|32
+fillmore|grover|32
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+barack
+clinton
+abraham
+delano
+grover
+fillmore
+herbert
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+
+Error: incomplete SQL: select "BREAK"
+
+select * from parent_height
+
+--select child from parent_height
+  --order by height;
+-- Expected output:
+--   herbert
+--   fillmore
+--   abraham
+--   delano
+--   grover
+--   barack
+--   clinton
+
+-- Sentences about siblings that are the same size
+--select "REPLACE THIS LINE WITH YOUR SOLUTION";
+-- Expected output:
+--   barack and clinton are standard siblings
+--   abraham and grover are toy siblings
+
+-- Ways to stack 4 dogs to a height of at least 170, ordered by total height
+--select "REPLACE THIS LINE WITH YOUR SOLUTION";
+-- Expected output:
+--   abraham, delano, clinton, barack|171
+--   grover, delano, clinton, barack|173
+--   herbert, delano, clinton, barack|176
+--   fillmore, delano, clinton, barack|177
+--   eisenhower, delano, clinton, barack|180
+
+-- All non-parent relations ordered by height difference
+--select "REPLACE THIS LINE WITH YOUR SOLUTION";
+-- Expected output:
+--   fillmore|barack
+--   eisenhower|barack
+--   fillmore|clinton
+--   eisenhower|clinton
+--   eisenhower|delano
+--   abraham|eisenhower
+--   grover|eisenhower
+--   herbert|eisenhower
+--   herbert|fillmore
+--   fillmore|herbert
+--   eisenhower|herbert
+--   eisenhower|grover
+--   eisenhower|abraham
+--   delano|eisenhower
+--   clinton|eisenhower
+--   clinton|fillmore
+--   barack|eisenhower
+--   barack|fillmore
+
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+BREAK
+abraham|barack|26
+abraham|clinton|26
+delano|herbert|46
+eisenhower|fillmore|35
+fillmore|abraham|32
+fillmore|delano|32
+fillmore|grover|32
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+BREAK
+abraham|barack|26
+abraham|clinton|26
+delano|herbert|46
+eisenhower|fillmore|35
+fillmore|abraham|32
+fillmore|delano|32
+fillmore|grover|32
+barack
+clinton
+abraham
+delano
+grover
+fillmore
+herbert
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+BREAK
+abraham|barack|26
+abraham|clinton|26
+delano|herbert|46
+eisenhower|fillmore|35
+fillmore|abraham|32
+fillmore|delano|32
+fillmore|grover|32
+barack
+clinton
+abraham
+delano
+grover
+fillmore
+herbert
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+BREAK
+abraham|barack|26
+abraham|clinton|26
+delano|herbert|46
+eisenhower|fillmore|35
+fillmore|abraham|32
+fillmore|delano|32
+fillmore|grover|32
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+abraham|barack|26
+abraham|clinton|26
+delano|herbert|46
+eisenhower|fillmore|35
+fillmore|abraham|32
+fillmore|delano|32
+fillmore|grover|32
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+REPLACE THIS LINE WITH YOUR SOLUTION
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+abraham|barack|26
+abraham|clinton|26
+delano|herbert|46
+eisenhower|fillmore|35
+fillmore|abraham|32
+fillmore|delano|32
+fillmore|grover|32
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+REPLACE THIS LINE WITH YOUR SOLUTION
+abraham|toy
+barack|standard
+clinton|standard
+delano|standard
+eisenhower|mini
+fillmore|mini
+grover|toy
+herbert|mini
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+abraham|barack|26
+abraham|clinton|26
+delano|herbert|46
+eisenhower|fillmore|35
+fillmore|abraham|32
+fillmore|delano|32
+fillmore|grover|32
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+REPLACE THIS LINE WITH YOUR SOLUTION
+Error: near line 74: table siblings has 3 values for 2 columns
+
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+abraham|barack|26
+abraham|clinton|26
+delano|herbert|46
+eisenhower|fillmore|35
+fillmore|abraham|32
+fillmore|delano|32
+fillmore|grover|32
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+REPLACE THIS LINE WITH YOUR SOLUTION
+Error: near line 74: no such column: a.s1
+
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+abraham|barack|26
+abraham|clinton|26
+delano|herbert|46
+eisenhower|fillmore|35
+fillmore|abraham|32
+fillmore|delano|32
+fillmore|grover|32
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+REPLACE THIS LINE WITH YOUR SOLUTION
+Error: near line 74: no such column: a.s1
+
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+abraham|barack|26
+abraham|clinton|26
+delano|herbert|46
+eisenhower|fillmore|35
+fillmore|abraham|32
+fillmore|delano|32
+fillmore|grover|32
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+REPLACE THIS LINE WITH YOUR SOLUTION
+
+Error: incomplete SQL: with 
+  siblings(parents, parents, all_sizes) as (
+    select a.child as s1, b.child as s2, size
+      from parents as a, parents as b, all_sizes 
+      where a.parent = b.parent and a.child < b.child)
+  select * from siblings
+  -- select a.s1 || "and " || b.s2 || "are " || size || "siblings"
+  --   from siblings as a, siblings as b 
+  --   where a.size = b.size;
+-- Expected output:
+--   barack and clinton are standard siblings
+--   abraham and grover are toy siblings
+
+-- Ways to stack 4 dogs to a height of at least 170, ordered by total height
+--select "REPLACE THIS LINE WITH YOUR SOLUTION";
+-- Expected output:
+--   abraham, delano, clinton, barack|171
+--   grover, delano, clinton, barack|173
+--   herbert, delano, clinton, barack|176
+--   fillmore, delano, clinton, barack|177
+--   eisenhower, delano, clinton, barack|180
+
+-- All non-parent relations ordered by height difference
+--select "REPLACE THIS LINE WITH YOUR SOLUTION";
+-- Expected output:
+--   fillmore|barack
+--   eisenhower|barack
+--   fillmore|clinton
+--   eisenhower|clinton
+--   eisenhower|delano
+--   abraham|eisenhower
+--   grover|eisenhower
+--   herbert|eisenhower
+--   herbert|fillmore
+--   fillmore|herbert
+--   eisenhower|herbert
+--   eisenhower|grover
+--   eisenhower|abraham
+--   delano|eisenhower
+--   clinton|eisenhower
+--   clinton|fillmore
+--   barack|eisenhower
+--   barack|fillmore
+
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+abraham|barack|26
+abraham|clinton|26
+delano|herbert|46
+eisenhower|fillmore|35
+fillmore|abraham|32
+fillmore|delano|32
+fillmore|grover|32
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+REPLACE THIS LINE WITH YOUR SOLUTION
+barack|clinton|toy
+barack|clinton|standard
+barack|clinton|standard
+barack|clinton|standard
+barack|clinton|mini
+barack|clinton|mini
+barack|clinton|toy
+barack|clinton|mini
+abraham|delano|toy
+abraham|grover|toy
+abraham|delano|standard
+abraham|grover|standard
+abraham|delano|standard
+abraham|grover|standard
+abraham|delano|standard
+abraham|grover|standard
+abraham|delano|mini
+abraham|grover|mini
+abraham|delano|mini
+abraham|grover|mini
+abraham|delano|toy
+abraham|grover|toy
+abraham|delano|mini
+abraham|grover|mini
+delano|grover|toy
+delano|grover|standard
+delano|grover|standard
+delano|grover|standard
+delano|grover|mini
+delano|grover|mini
+delano|grover|toy
+delano|grover|mini
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+abraham|barack|26
+abraham|clinton|26
+delano|herbert|46
+eisenhower|fillmore|35
+fillmore|abraham|32
+fillmore|delano|32
+fillmore|grover|32
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+REPLACE THIS LINE WITH YOUR SOLUTION
+abraham|toy
+barack|standard
+clinton|standard
+delano|standard
+eisenhower|mini
+fillmore|mini
+grover|toy
+herbert|mini
+barack|clinton|toy
+barack|clinton|standard
+barack|clinton|standard
+barack|clinton|standard
+barack|clinton|mini
+barack|clinton|mini
+barack|clinton|toy
+barack|clinton|mini
+abraham|delano|toy
+abraham|grover|toy
+abraham|delano|standard
+abraham|grover|standard
+abraham|delano|standard
+abraham|grover|standard
+abraham|delano|standard
+abraham|grover|standard
+abraham|delano|mini
+abraham|grover|mini
+abraham|delano|mini
+abraham|grover|mini
+abraham|delano|toy
+abraham|grover|toy
+abraham|delano|mini
+abraham|grover|mini
+delano|grover|toy
+delano|grover|standard
+delano|grover|standard
+delano|grover|standard
+delano|grover|mini
+delano|grover|mini
+delano|grover|toy
+delano|grover|mini
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ 
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+REPLACE THIS LINE WITH YOUR SOLUTION
+abraham|toy
+barack|standard
+clinton|standard
+delano|standard
+eisenhower|mini
+fillmore|mini
+grover|toy
+herbert|mini
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+REPLACE THIS LINE WITH YOUR SOLUTION
+abraham|toy
+barack|standard
+clinton|standard
+delano|standard
+eisenhower|mini
+fillmore|mini
+grover|toy
+herbert|mini
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+REPLACE THIS LINE WITH YOUR SOLUTION
+abraham|toy
+barack|standard
+clinton|standard
+delano|standard
+eisenhower|mini
+fillmore|mini
+grover|toy
+herbert|mini
+barack|clinton|standard
+abraham|delano|toy
+abraham|grover|toy
+delano|grover|standard
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+REPLACE THIS LINE WITH YOUR SOLUTION
+abraham|toy
+barack|standard
+clinton|standard
+delano|standard
+eisenhower|mini
+fillmore|mini
+grover|toy
+herbert|mini
+barack|standard|clinton|standard
+barack|standard|clinton|standard
+barack|standard|clinton|standard
+abraham|toy|delano|toy
+abraham|toy|delano|toy
+abraham|toy|grover|toy
+abraham|toy|grover|toy
+delano|standard|grover|standard
+delano|standard|grover|standard
+delano|standard|grover|standard
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+REPLACE THIS LINE WITH YOUR SOLUTION
+abraham|toy
+barack|standard
+clinton|standard
+delano|standard
+eisenhower|mini
+fillmore|mini
+grover|toy
+herbert|mini
+barack|standard|clinton|standard
+abraham|toy|grover|toy
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+REPLACE THIS LINE WITH YOUR SOLUTION
+abraham|toy
+barack|standard
+clinton|standard
+delano|standard
+eisenhower|mini
+fillmore|mini
+grover|toy
+herbert|mini
+Error: near line 73: no such column: s1
+
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+REPLACE THIS LINE WITH YOUR SOLUTION
+abraham|toy
+barack|standard
+clinton|standard
+delano|standard
+eisenhower|mini
+fillmore|mini
+grover|toy
+herbert|mini
+Error: near line 73: no such column: siblings
+
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+REPLACE THIS LINE WITH YOUR SOLUTION
+abraham|toy
+barack|standard
+clinton|standard
+delano|standard
+eisenhower|mini
+fillmore|mini
+grover|toy
+herbert|mini
+Error: near line 73: no such column: siblings
+
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+REPLACE THIS LINE WITH YOUR SOLUTION
+abraham|toy
+barack|standard
+clinton|standard
+delano|standard
+eisenhower|mini
+fillmore|mini
+grover|toy
+herbert|mini
+barackand clintonare standardsiblings
+abrahamand groverare toysiblings
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+REPLACE THIS LINE WITH YOUR SOLUTION
+abraham|toy
+barack|standard
+clinton|standard
+delano|standard
+eisenhower|mini
+fillmore|mini
+grover|toy
+herbert|mini
+barack and clinton are standard siblings
+abraham and grover are toy siblings
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+Error: near line 54: near "where": syntax error
+barack and clinton are standard siblings
+abraham and grover are toy siblings
+
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+barack and clinton are standard siblings
+abraham and grover are toy siblings
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+Error: near line 54: near "select": syntax error
+barack and clinton are standard siblings
+abraham and grover are toy siblings
+
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+WHOA
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+barack and clinton are standard siblings
+abraham and grover are toy siblings
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+barack and clinton are standard siblings
+abraham and grover are toy siblings
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+abraham|toy
+barack|standard
+clinton|standard
+delano|standard
+eisenhower|mini
+fillmore|mini
+grover|toy
+herbert|mini
+abraham|toy
+barack|standard
+clinton|standard
+delano|standard
+eisenhower|mini
+fillmore|mini
+grover|toy
+herbert|mini
+barack and clinton are standard siblings
+abraham and grover are toy siblings
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+abraham|toy
+barack|standard
+clinton|standard
+delano|standard
+eisenhower|mini
+fillmore|mini
+grover|toy
+herbert|mini
+BREAK
+abraham|toy
+barack|standard
+clinton|standard
+delano|standard
+eisenhower|mini
+fillmore|mini
+grover|toy
+herbert|mini
+barack and clinton are standard siblings
+abraham and grover are toy siblings
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+barack and clinton are standard siblings
+abraham and grover are toy siblings
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+barack and clinton are standard siblings
+abraham and grover are toy siblings
+REPLACE THIS LINE WITH YOUR SOLUTION
+
+Error: incomplete SQL: with
+  stack(dogs, number, sum) as (
+    select name, 1, height union
+    select dogs || ", " || name, number+1, sum+height
+    from dogs)
+select * from stack
+-- Expected output:
+--   abraham, delano, clinton, barack|171
+--   grover, delano, clinton, barack|173
+--   herbert, delano, clinton, barack|176
+--   fillmore, delano, clinton, barack|177
+--   eisenhower, delano, clinton, barack|180
+
+-- All non-parent relations ordered by height difference
+--select "REPLACE THIS LINE WITH YOUR SOLUTION";
+-- Expected output:
+--   fillmore|barack
+--   eisenhower|barack
+--   fillmore|clinton
+--   eisenhower|clinton
+--   eisenhower|delano
+--   abraham|eisenhower
+--   grover|eisenhower
+--   herbert|eisenhower
+--   herbert|fillmore
+--   fillmore|herbert
+--   eisenhower|herbert
+--   eisenhower|grover
+--   eisenhower|abraham
+--   delano|eisenhower
+--   clinton|eisenhower
+--   clinton|fillmore
+--   barack|eisenhower
+--   barack|fillmore
+
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> .exit
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+barack and clinton are standard siblings
+abraham and grover are toy siblings
+REPLACE THIS LINE WITH YOUR SOLUTION
+Error: near line 75: no such column: dogs
+
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+barack and clinton are standard siblings
+abraham and grover are toy siblings
+REPLACE THIS LINE WITH YOUR SOLUTION
+Error: near line 75: no such column: dog
+
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+barack and clinton are standard siblings
+abraham and grover are toy siblings
+REPLACE THIS LINE WITH YOUR SOLUTION
+Error: near line 75: no such column: dog
+
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+barack and clinton are standard siblings
+abraham and grover are toy siblings
+REPLACE THIS LINE WITH YOUR SOLUTION
+Error: near line 75: no such column: d
+
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+barack and clinton are standard siblings
+abraham and grover are toy siblings
+REPLACE THIS LINE WITH YOUR SOLUTION
+Error: near line 75: no such column: d
+
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+barack and clinton are standard siblings
+abraham and grover are toy siblings
+REPLACE THIS LINE WITH YOUR SOLUTION
+Error: near line 75: no such column: d
+
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+barack and clinton are standard siblings
+abraham and grover are toy siblings
+REPLACE THIS LINE WITH YOUR SOLUTION
+Error: near line 75: no such column: d
+
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+barack and clinton are standard siblings
+abraham and grover are toy siblings
+REPLACE THIS LINE WITH YOUR SOLUTION
+Error: near line 75: no such column: d
+
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+barack and clinton are standard siblings
+abraham and grover are toy siblings
+REPLACE THIS LINE WITH YOUR SOLUTION
+Error: near line 75: no such column: dog
+
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+barack and clinton are standard siblings
+abraham and grover are toy siblings
+REPLACE THIS LINE WITH YOUR SOLUTION
+Error: near line 75: no such column: names
+
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+barack and clinton are standard siblings
+abraham and grover are toy siblings
+REPLACE THIS LINE WITH YOUR SOLUTION
+Error: near line 75: no such column: names
+
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+barack and clinton are standard siblings
+abraham and grover are toy siblings
+REPLACE THIS LINE WITH YOUR SOLUTION
+Error: near line 75: no such column: names
+
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+barack and clinton are standard siblings
+abraham and grover are toy siblings
+REPLACE THIS LINE WITH YOUR SOLUTION
+Error: near line 75: no such column: names
+
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+barack and clinton are standard siblings
+abraham and grover are toy siblings
+REPLACE THIS LINE WITH YOUR SOLUTION
+Error: near line 75: no such column: names
+
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+barack and clinton are standard siblings
+abraham and grover are toy siblings
+REPLACE THIS LINE WITH YOUR SOLUTION
+Error: near line 75: no such column: ming
+
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+barack and clinton are standard siblings
+abraham and grover are toy siblings
+REPLACE THIS LINE WITH YOUR SOLUTION
+Error: near line 75: no such column: ming
+
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+barack and clinton are standard siblings
+abraham and grover are toy siblings
+REPLACE THIS LINE WITH YOUR SOLUTION
+Error: near line 75: no such column: name
+
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+barack and clinton are standard siblings
+abraham and grover are toy siblings
+REPLACE THIS LINE WITH YOUR SOLUTION
+Error: near line 75: no such column: name
+
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+barack and clinton are standard siblings
+abraham and grover are toy siblings
+REPLACE THIS LINE WITH YOUR SOLUTION
+Error: near line 75: no such column: name
+
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+barack and clinton are standard siblings
+abraham and grover are toy siblings
+REPLACE THIS LINE WITH YOUR SOLUTION
+Error: near line 75: no such column: name
+
+airbears2-10-142-30-5:homework KevinChen$ sqlite3 -init hw10.sql
+-- Loading resources from hw10.sql
+abraham
+eisenhower
+fillmore
+grover
+herbert
+herbert
+fillmore
+abraham
+delano
+grover
+barack
+clinton
+barack and clinton are standard siblings
+abraham and grover are toy siblings
+REPLACE THIS LINE WITH YOUR SOLUTION
+Error: near line 75: no such column: name
+
+airbears2-10-142-30-5:homework KevinChen$ 

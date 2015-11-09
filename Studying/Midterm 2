@@ -1,0 +1,14 @@
+def make_prime_generator():
+	 n= 2 
+	 def primes():
+	 	nonlocal n
+	 	i = 2
+	 	n += 1
+	 	while i < n//2:
+	 		if n % i == 0:
+	 			n += 1
+	 		else:
+	 			i += 1
+	 	return n
+	 return primes
+
